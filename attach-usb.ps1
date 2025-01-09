@@ -1,0 +1,1 @@
+usbipd attach --wsl --busid 8-2

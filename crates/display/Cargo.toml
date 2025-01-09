@@ -1,0 +1,35 @@
+[package]
+name = "display"
+version = "0.1.0"
+authors = ["kolupaev"]
+edition = "2021"
+resolver = "2"
+rust-version = "1.77"
+
+
+[lib]
+name = "display"
+harness = false # do not use the built in cargo test harness -> resolve rust-analyzer errors
+test = false
+
+[features]
+default = []
+
+
+[dependencies]
+# log = "0.4"
+thiserror = "*"
+embedded-graphics = "*"
+embedded-layout = "*"
+eg-seven-segment = "*"
+
+async-rwlock = "*"
+asyncs-sync = "*"
+log = "*"
+
+uom = "*"
+u8g2-fonts = { version = "*", features = ["embedded_graphics_textstyle", "std"] }
+
+[dev-dependencies]
+embedded-graphics-simulator = "0.7.0"
+anyhow = "*"

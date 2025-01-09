@@ -1,0 +1,5 @@
+[app]
+wifi_ssid = "<>"
+wifi_psk = "<>"
+mqtt_server = "mqtt://<mqtt server>.local/"
+mqtt_sensor_topic = "homeassistant/sensor/temp_sensor_temperature/state"

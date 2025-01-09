@@ -1,0 +1,23 @@
+[workspace]
+
+members = ["crates/display", "crates/app"]
+default-members =  ["crates/app", "crates/display"]
+exclude = ["crates/it8951"]
+resolver = "2"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+
+[profile.dev]
+debug = true    # Symbols are nice and they don't increase the size on Flash
+opt-level = "z"
+lto = true
+codegen-units = 1
+
+[profile.examples]
+inherits = "dev"
+opt-level = 0
+lto = false
+codegen-units = 256
